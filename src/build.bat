@@ -6,21 +6,23 @@ title Build
 
 echo .
 echo Компиляция под Kolibri
-kos32-tcc main.c modules.c -o KolibriRpg -lck
+kos32-tcc main.c modules.c -o KosBuild -lck -I ../libc/include
 
 
 echo .
 echo Компиляция под Win32
-gcc main.c modules.c -o KolibriRpg.exe -Os
+gcc -O3 -flto -Wall main.c modules.c -o WinBuild.exe
 
 echo .
 echo Сжатие с помощью kpack
-kpack KolibriRpg KolibriRpg.kex
+kpack KosBuild KolibriRpg.kex
 
 echo .
 echo Сжатие с помощью upx
-del KolibriRpgPacked.exe
-upx KolibriRpg.exe -o KolibriRpgPacked.exe
+del KolibriRpg.exe
+upx WinBuild.exe -o KolibriRpg.exe
 
+del KosBuild
+del WinBuild.exe
 timeout.exe /t 20
 build.bat
