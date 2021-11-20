@@ -151,8 +151,8 @@ void home(){
 	puts("\n\t\t|||Дом|||\n\n");
 	//Надо добавить описание к каждой локации
 	puts("Дом, милый дом... Домом Вы называете свою однокомнатную квартиру. В ней уютно и тепло.\n");
-	printf("\tЗдоровье: %d Баланс: %d\n", hp, money);
-	printf("\tЭнтузиазм: %d Усталость: %d", enthusiasm, fatigue);
+	printf("\tЗдоровье: %d   Баланс: %d\n", hp, money);
+	printf("\tЭнтузиазм: %d  Усталость: %d", enthusiasm, fatigue);
 	printf("\nЗнания:\n\tFASM %d\tC %d", lvl[0], lvl[1]);
 	printf("\n\tC++ %d\tC-- %d\n\tPascal %d\n", lvl[2], lvl[3], lvl[4]);
 	puts("\nДействия:\n\t0 Заняться проектом\n\t1 Учиться\n\t2 Работать\n\t3 Отдохнуть\n\t4 Сохраниться\n\t9 Выйти");

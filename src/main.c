@@ -1,5 +1,4 @@
 // Подключение библиотек
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <conio.h>
 
@@ -16,7 +15,7 @@
 	int hp, money, enthusiasm, fatigue, user_select;
 	
 	//Уровень знаний: fasm, си, c++, c--, pascal
-	int start_lvl[5] = {0, 1, 0, 0, 1 };
+	volatile int start_lvl[5] = {0, 1, 0, 0, 1 };
 	
 	//Уровень знаний: fasm, си, c++, c--, pascal
 	int lvl[5];
